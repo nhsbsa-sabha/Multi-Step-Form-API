@@ -5,18 +5,15 @@ const postFormReview = async (req, res) => {
   try {
     const userId = getOrCreateSessionUserId(req)
 
-    // Retrieve saved data from step 1 and 2
     const personalDetails = formStorage.getProgress(userId, 1) || {}
     const addressDetails = formStorage.getProgress(userId, 2) || {}
 
-    // Combine into a single final payload
     const finalData = {
       ...personalDetails,
       ...addressDetails
     }
 
-    // Final save (could be to a DB or external service)
-    formStorage.saveStep(userId, 3, finalData) // Optional: store final submission as step 3
+    formStorage.saveStep(userId, 3, finalData) 
 
     console.log(`Final submission for user ${userId}:`, finalData)
 
