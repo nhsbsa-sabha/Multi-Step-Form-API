@@ -21,7 +21,13 @@ else if (step === 2) {
       ...formData
     }
   }
+    else if (step === 3) {  
+    formProgressStorage[sessionId].completeFormData = {
+            personalDetails: formProgressStorage[sessionId].personalDetails,
+            addressDetails: formProgressStorage[sessionId].addressDetails
+        } 
   
+}
 }
 const getProgress = (sessionId) => {
     return formProgressStorage[sessionId] || null
