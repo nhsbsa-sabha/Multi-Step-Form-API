@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha \"__test__/**/*.test.js\""
+    "test": "mocha \"__test__/**/*.test.js\"",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
