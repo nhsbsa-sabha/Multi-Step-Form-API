@@ -1,7 +1,7 @@
 const express = require('express')
 const check = require('express-validator')
 const { validatePersonalDetails, validateAddressDetails } = require('../validation/formValidation')
-const PersonalDetailsController = require('../controllers/PersonalDetailsController')
+const personalDetailsController = require('../controllers/personalDetailsController')
 const formProgressController = require('../controllers/formProgressController')
 const addressDetailsController = require('../controllers/addressDetailsController')
 const reviewDetailsController = require('../controllers/reviewDetailsController')
@@ -12,7 +12,7 @@ const router = express.Router()
 router.post(
   '/form/save-step-1',
   validatePersonalDetails,
-  PersonalDetailsController.postPersonalDetails
+  personalDetailsController.postPersonalDetails
 )
 router.post(
   '/form/save-step-2',

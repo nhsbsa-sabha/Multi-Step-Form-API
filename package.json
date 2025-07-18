@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha \"__test__/**/*.test.js\""
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,15 @@
   },
   "homepage": "https://github.com/nhsbsa-sabha/Multi-Step-Form-API#readme",
   "dependencies": {
-    "chai": "^5.2.1",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "express-validator": "^7.2.1",
     "mocha": "^11.7.1"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "node-mocks-http": "^1.17.2",
+    "proxyquire": "^2.1.3",
+    "sinon": "^21.0.0"
   }
 }

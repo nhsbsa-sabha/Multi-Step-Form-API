@@ -14,7 +14,7 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: false } // Set to true if using HTTPS
 }))
-app.use('/', apiRoutes)
+ app.use('/', apiRoutes)
 app.get('/', (req, res) => {
   res.send('Welcome to the Multi-Step Form API')
 })
@@ -22,3 +22,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`App is listening at http://localhost:${PORT}`)
 })
+module.exports = app
