@@ -1,0 +1,26 @@
+const session = require("express-session")
+
+const formProgressStorage = {}
+const saveStep =(sessionId, step, formData) => {
+  if (!formProgressStorage[sessionId]) {
+    formProgressStorage[sessionId] = {
+        currentStep: step,
+        personalDetails:{}
+    }
+  }
+ formProgressStorage[sessionId].currentStep = Math.max(formProgressStorage[sessionId].currentStep, step)
+ if (step === 1) {
+    formProgressStorage[sessionId].personalDetails = {
+      ...formProgressStorage[sessionId].personalDetails,
+      ...formData
+  }
+}
+}
+const getProgress = (sessionId) => {
+    return formProgressStorage[sessionId] || null
+}
+
+module.exports = {
+  saveStep,
+  getProgress
+}

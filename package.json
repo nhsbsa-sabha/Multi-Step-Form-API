@@ -20,6 +20,8 @@
   "dependencies": {
     "chai": "^5.2.1",
     "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "express-validator": "^7.2.1",
     "mocha": "^11.7.1"
   }
 }
