@@ -1,0 +1,25 @@
+{
+  "name": "multi-step-form-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhsbsa-sabha/Multi-Step-Form-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhsbsa-sabha/Multi-Step-Form-API/issues"
+  },
+  "homepage": "https://github.com/nhsbsa-sabha/Multi-Step-Form-API#readme",
+  "dependencies": {
+    "chai": "^5.2.1",
+    "express": "^5.1.0",
+    "mocha": "^11.7.1"
+  }
+}
