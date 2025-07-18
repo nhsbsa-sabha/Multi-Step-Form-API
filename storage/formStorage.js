@@ -33,7 +33,11 @@ const getProgress = (sessionId) => {
     return formProgressStorage[sessionId] || null
 }
 
+const resetStorage = () => {
+  Object.keys(formProgressStorage).forEach(key => delete formProgressStorage[key])
+}
 module.exports = {
   saveStep,
-  getProgress
+  getProgress,
+  resetStorage
 }
