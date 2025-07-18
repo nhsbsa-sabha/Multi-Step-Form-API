@@ -5,7 +5,7 @@ const getFormProgress = async (req, res) => {
     const userId = getOrCreateSessionUserId(req)
     const progress = formStorage.getProgress(userId)
   console.log(`Progress for user ${userId}:`, progress)
-    res.send({
+    res.status(200).json({
         progress: progress
     })
   
