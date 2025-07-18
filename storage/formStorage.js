@@ -15,6 +15,13 @@ const saveStep =(sessionId, step, formData) => {
       ...formData
   }
 }
+else if (step === 2) {
+    formProgressStorage[sessionId].addressDetails = {
+      ...formProgressStorage[sessionId].addressDetails,
+      ...formData
+    }
+  }
+  
 }
 const getProgress = (sessionId) => {
     return formProgressStorage[sessionId] || null
