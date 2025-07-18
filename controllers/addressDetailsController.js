@@ -20,7 +20,8 @@ const postAddressDetails = async (req, res) => {
       errors: {}
     }
 
-    formStorage.saveStep(userId, 2, formData)
+    
+    await formStorage.saveStep(userId, 2, formData)
 
     console.log(`Address details saved for user ${userId}:`, formData)
 
